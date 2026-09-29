@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SellSimple</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <header class="site-header">
+        <div class="header-top">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/SellSimple-Banner.svg' %}" class="banner-img" alt="SellSimple Banner">
+            </a>
+        </div>
+        <div class="header-bottom">
+            <div class="nav-left">
+                <div class="auth-subtext">
+                    {% if user.is_authenticated %}
+                        <span class="welcome-text">Welcome back, {{ user.username }}</span>
+                        <form action="{% url 'logout' %}" method="post" style="display: inline; margin-left: 8px;">
+                            {% csrf_token %}
+                            <button type="submit" class="auth-btn-link">Log Out</button>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}">Log In</a> <span class="divider">|</span> 
+                        <a href="{% url 'signup' %}">Sign Up</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="{% url 'post_new' %}" class="new-listing-btn">New Listing</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+  </body>
+</html>
