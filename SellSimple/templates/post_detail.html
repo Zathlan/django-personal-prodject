@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="post-entry">
+    {% if post.cover %}
+    <div class="post-image" style="margin-bottom: 20px;">
+        <img src="{{ post.cover.url }}" alt="{{ post.item }}" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    {% endif %}
+    <h2>{{ post.item }}</h2>
+    <h4> Listed by: {{ post.owner }}</h4>
+    <p> {{ post.description }}</p>
+    <p><strong>Price:</strong> ${{ post.price }}</p>
+</div>
+<div class="post-actions" style="margin-top: 20px;">
+    <a href="{% url 'post_edit' post.pk %}" style="margin-right: 15px;">Edit Listing</a>
+    <a href="{% url 'post_delete' post.pk %}">Delete Listing</a>
+</div>
+{% endblock content %}

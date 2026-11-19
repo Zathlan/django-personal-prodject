@@ -1,0 +1,134 @@
+body {
+    font: 18px/1.6 sans-serif;
+    color: #0b140f;
+    width: 900px; 
+    max-width: 100%; 
+    margin: 0 auto;  
+    padding: 0 20px;
+    min-height: 100vh;
+    box-sizing: border-box; 
+    background: linear-gradient(145deg, #f7f9f4 0%, #ebf2e6 40%, #062414 100%) fixed;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(11, 79, 49, 0.1);
+    border-right: 1px solid rgba(11, 79, 49, 0.1);
+}
+
+a { 
+    text-decoration: none; 
+    color: #0b4f31;
+}
+
+a:hover { 
+    color: #bfa343; 
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, rgb(50, 168, 117), rgb(3, 54, 32)) 1;
+}
+
+.header-top {
+    width: 100%;
+    text-align: center;
+}
+
+.banner-img {
+    height: auto;
+    max-height: 25rem;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.nav-left, .nav-right { 
+    display: flex; 
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-right a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.new-listing-btn {
+    display: inline-block;
+    color: #0d5c3a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.new-listing-btn:hover {
+    color: #bfa343;
+}
+
+.auth-subtext {
+    font-size: 0.85rem;
+    color: #3a473f;
+    text-align: center;
+}
+
+.auth-subtext .divider {
+    color: rgba(13, 92, 58, 0.3);
+    margin: 0 4px;
+}
+
+.auth-btn-link {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #0b4f31;
+    cursor: pointer;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.post-entry {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.post-entry h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.post-entry h4 {
+    margin: 0 0 8px;
+    color: #bfa343; 
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ledger-price-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    color: #aa7c11;
+    background: rgba(214, 175, 55, 0.15);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
